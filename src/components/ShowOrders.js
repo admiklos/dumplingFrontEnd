@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 class ShowOrders extends React.Component{
 
   handleDeleteAllClick = () => {
-    fetch('http://localhost:8080/dumplings/', {
+    fetch('https://dumplings.cfapps.io/dumplings/', {
       method: 'delete',
     }).then( () => {
       this.props.getDataFromAPI();

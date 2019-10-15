@@ -16,7 +16,7 @@ class App extends React.Component {
   }
 
   getDataFromAPI = () => {
-    fetch("http://localhost:8080/dumplings")
+    fetch("https://dumplings.cfapps.io/dumplings")
       .then( (res) => res.json() )
       .then((response)=> {
         this.setState({dumplings:response});

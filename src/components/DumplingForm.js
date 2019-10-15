@@ -42,7 +42,7 @@ class DumplingForm extends React.Component {
   }
 
   handleCreateClick=(event)=>{
-    fetch('http://localhost:8080/dumpling', {
+    fetch('https://dumplings.cfapps.io/dumpling', {
       method: 'post',
       body: JSON.stringify({
         wrapperType   : this.state.wrapperType,
@@ -60,7 +60,7 @@ class DumplingForm extends React.Component {
   }
 
   handleUpdateClick=(id)=>{
-    fetch('http://localhost:8080/dumpling/' + id, {
+    fetch('https://dumplings.cfapps.io/dumpling/' + id, {
       method: 'put',
       body: JSON.stringify({
         wrapperType   : this.state.wrapperType,

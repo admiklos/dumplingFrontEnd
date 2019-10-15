@@ -10,7 +10,7 @@ class ShowOrder extends React.Component {
   }
 
   getOrder = (id) => {
-    fetch('http://localhost:8080/dumpling/' + id )
+    fetch('https://dumplings.cfapps.io/dumpling/' + id )
       .then( (res) => res.json() )
       .then((response)=> {
         console.log(response);
@@ -19,7 +19,7 @@ class ShowOrder extends React.Component {
 
   componentDidMount() {
     const { id } = this.props.match.params;
-    fetch('http://localhost:8080/dumpling/' + id )
+    fetch('https://dumplings.cfapps.io/dumpling/' + id )
       .then( (res) => res.json() )
       .then((order)=> {
         console.log(order);
@@ -28,7 +28,7 @@ class ShowOrder extends React.Component {
   }
 
   handleDeleteOneClick = (id) => {
-    fetch('http://localhost:8080/dumpling/' + id, {
+    fetch('https://dumplings.cfapps.io/dumpling/' + id, {
       method: 'delete',
     }).then( () => {
       this.props.getDataFromAPI();
